@@ -103,6 +103,6 @@ $ git commit -m "更新了哪些東西"
 檢查暫存
 $ git status
 
-發現超前GitHub暫存的話，推送回GitHub
+發現超前GitHub上的commit的話，推送回GitHub
 $ git push origin
 
