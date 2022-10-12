@@ -1,0 +1,116 @@
+從 https ://www.git-scm.com/ 下載Git
+
+先配置使用者姓名和email(與GitHub上的一致)
+$ git config --global user.name "Chijay1029"
+$ git config --global user.email "leemua6915@gmail.com"
+
+創造目標資料夾
+$ mkdir myproject
+$ cd myproject
+
+初始化Git(創造repository)
+$ git init
+
+添加檔案到目標資料夾，並查看
+$ ls
+$ git status
+
+將檔案添加到儲存庫中
+$ git add index.html
+
+或一次性添加全部檔案
+$ git add --all
+簡寫: $ git -A 
+
+添加完成後，提交commit 並總是附加消息
+$ git commit -m "更新了哪些東西"
+
+也可以添加-a 跳過暫存直接提交(通常不建議)
+$ git commit -a -m "更新了哪些東西"
+
+查看歷史紀錄
+$ git log
+
+用簡短的方式查看
+$ git log --oneline
+
+查看特定命令
+$ git commit -help
+
+列出所有命令(會顯示很長的列表)
+如果卡住，使用Shift+ G 跳轉至結尾，q 退出
+$ git help --all
+
+創造新的分支
+$ git branch Newbranch
+
+或是添加-b，跳轉到分支，如果不存在直接創建
+$ git checkout -b Newbranch
+
+查看目前分支
+$ git branch
+
+跳轉分支
+$ git checkout Newbranch
+
+當在分支更改了檔案後，添加到暫存
+$ git add --all
+
+檢查是否已經暫存
+$ git status
+
+確認後再次提交
+$ git commit -m "更新了哪些東西"
+
+合併分支(先跳轉至master)
+$ git chechout master
+$ git merge Newbranch
+
+合併後，可將分支刪除
+$ git branch -d Newbranch
+
+
+將本地Git上傳到GitHub
+先從GitHub創造新的repository
+複製連結 https://github.com/Chijay1029/HTML-Page.git
+
+$ git remote add origin https://github.com/Chijay1029/HTML-Page.git
+
+將master推送到url，默認為遠程分支
+$ git push --set-upstream origin master
+
+獲取GitHub上的更改紀錄
+$ git fetch origin
+
+檢查暫存
+$ git status
+
+若發現落後commit，查看GitHub上log紀錄
+$ git log origin/master
+
+確認無誤後，與本地Git合併
+$ git merge origin/master
+
+再次檢查暫存
+$ git status
+
+若要直接更新本地而不進行檢查
+$ git pull origin
+
+在本地更新完後提交
+$ git commit -m "更新了哪些東西"
+
+檢查暫存
+$ git status
+
+發現超前GitHub上的commit的話，推送回GitHub
+$ git push origin
+
+在GitHub上創造新的分支後，從本地拉取分支
+$ git checkout Newbranch
+
+檢查是否為最新
+$ git pull
+
+檢查本地分支，發現已完成繼承
+$ git branch
