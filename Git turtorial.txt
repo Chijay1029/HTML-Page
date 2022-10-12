@@ -1,0 +1,71 @@
+從 https ://www.git-scm.com/ 下載Git
+
+先配置使用者姓名和email(與GitHub上的一致)
+$ git config --global user.name "Chijay1029"
+$ git config --global user.email "leemua6915@gmail.com"
+
+創造目標資料夾
+$ mkdir myproject
+$ cd myproject
+
+初始化Git(創造repository)
+$ git init
+
+添加檔案到目標資料夾，並查看
+$ ls
+$ git status
+
+將檔案添加到儲存庫中
+$ git add index.html
+
+或一次性添加全部檔案
+$ git add --all
+簡寫: $ git -A 
+
+添加完成後，提交commit 並總是附加消息
+$ git commit -m "更新了哪些東西"
+
+也可以添加-a 跳過暫存直接提交(通常不建議)
+$ git commit -a -m "更新了哪些東西"
+
+查看歷史紀錄
+$ git log
+
+用簡短的方式查看
+$ git log --oneline
+
+查看特定命令
+$ git commit -help
+
+列出所有命令(會顯示很長的列表)
+如果卡住，使用Shift+ G 跳轉至結尾，q 退出
+$ git help --all
+
+創造新的分支
+$ git branch Newbranch
+
+或是添加-b，跳轉到分支，如果不存在直接創建
+$ git checkout -b Newbranch
+
+查看目前分支
+$ git branch
+
+跳轉分支
+$ git checkout Newbranch
+
+當在分支更改了檔案後，添加到暫存
+$ git add --all
+
+檢查是否已經暫存
+$ git status
+
+確認後再次提交
+$ git commit -m "更新了哪些東西"
+
+合併分支(先跳轉至master)
+$ git chechout master
+$ git merge Newbranch
+
+合併後，可將分支刪除
+$ git branch -d Newbranch
+

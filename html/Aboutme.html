@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<title>aboutme</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="nav.css">
+    <script src="https://kit.fontawesome.com/17907e3764.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.4.0.js"></script>
+<style>
+</style>
+<body>
+<div id="container">
+
+<div id="header">
+	<div class="header_right"><img src="../images/Yurinpanda.png" alt="icon" style="width:50px; height: 50px;"></div>
+        <a href="Home.html" title="home">
+            <i class='fas fa-home' style='font-size:30px'></i>
+        </a>
+	<div class="header_right"><h2 >我的網頁</h2></div>
+        <form class="header_form">
+            <input type="text" name="Search" placeholder="Search..">
+        </form>
+</div>
+
+<div id="nav">
+    <ul class="clearfix">
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="menu dropbtn" tltle="menu" style="height: 46.4px;"><i class="fa-solid fa-bars"></i></a>
+            <div class="dropdown-content">
+                <a href="javascript:void(0)" title="" id="dropdown_btn1">學歷</a>
+                <a href="javascript:void(0)" title="" id="dropdown_btn2">工作經歷(一)</a>
+                <a href="javascript:void(0)" title="" id="dropdown_btn3">工作經歷(二)</a>
+                <a href="javascript:void(0)" title="" id="dropdown_btn4">工作經歷(三)</a>
+            </div>
+        </li>
+        <li><a class="active" href="Aboutme.html" title="">關於我</a></li>
+        <li class="page2"><a href="Activity.html" title="">活動錦集</a></li>
+        <li class="page3"><a href="javascript:void(0)" title="Page3">頁面3</a></li>
+        <li style="float:right; height: auto;">
+            <a href="#header" title="回到頂端" style="height: 26.4px; width: 60px;">
+                <i class='far fa-arrow-alt-circle-up' style='font-size:30px'></i>
+            </a>
+        </li>
+    </ul>
+	
+</div >
+
+<div class="clearfix" id="main">
+	<div id="menu">
+        <h3>Menu</h3>
+        <ul class="ul-list">
+            <li>
+                <a href="javascript:void(0)" title="" id="menu_btn1">學歷</a>
+                <a href="javascript:void(0)" title="" id="menu_btn2">工作經歷(一)</a>
+                <a href="javascript:void(0)" title="" id="menu_btn3">工作經歷(二)</a>
+                <a href="javascript:void(0)" title="" id="menu_btn4">工作經歷(三)</a>
+            </li>
+        </ul>
+	</div>
+
+	<div id="content">
+        <div id="content1">
+            <h2>自我介紹</h2>
+                <div>
+                    <div class="content_photo">
+                       <img class="photo" src="../images/Myphoto1.jpg" alt="照片">
+                    </div>
+                    <p>我叫李馳傑,來自高雄市,目前是一位電腦工程師。求學時
+                    期以來喜歡參加社團,辦活動,與朋友們一起把一件件事情完成
+                    。平時興趣是網路上尋找和學習感興趣的新事物，目前在自學日
+                    文，期望之後去日本自助旅行能和當地人交流。<br></p>
+                    <p>當投入一件事情後常常會做到忘我，因此常被身邊的朋友當作工
+                    作狂，也因為集中力和專注度高讓我更容易掌握新事物。<br></p>
+                    <p>個性上凡事追求完美，希望能做就把事情做到最好，座右銘是:
+                    "不去想有可能失敗，而去想該如何成功"。</p>
+                    
+                </div>
+        </div>
+        <div id="content2" style="display: none;">
+            <h2>工作經歷(一)</h2>
+                <div>
+                    <div class="content_photo">
+                        <img class="photo" src="../images/Myphoto2.jpg" alt="照片">
+                    </div>
+                    
+                    <p><br></p>
+                    <p></p>
+                    
+
+                </div>
+        </div>
+        <div id="content3" style="display: none;">
+                <h2>工作經歷(二)</h2>
+                    <div>
+                        <div class="content_photo">
+                            <img class="photo" src="../images/Myphoto7.jpg" alt="照片">
+                        </div>
+                        
+                        <p><br></p>
+                        <p></p>
+    
+                    </div>
+        </div>
+        <div id="content4" style="display: none;">
+            <h2>工作經歷(三)</h2>
+                <div>
+                    <div class="content_photo">
+                        <img class="photo" src="../images/Myphoto4.jpg" alt="照片">
+                    </div>
+                    
+                    <p><br></p>
+                        <p></p>
+
+                </div>
+        </div>
+	</div>
+    
+</div>
+
+
+<div id="footer">
+	版權 © ChiJay1029.com
+</div>
+<!-- 
+<script>
+    $(document).ready(function(){
+        $(".page3").click(function(){
+            $("#content1").text($(window).width());
+        });
+    })
+</script>
+ -->
+ <!-- 頁面3按鈕,更改文本內容--> 
+<script>
+    $(document).ready(function(){
+        $("#dropdown_btn1, #menu_btn1").click(function(){
+            $("#content2, #content3, #content4").hide();
+            $("#content1").show();
+        });
+        $("#dropdown_btn2, #menu_btn2").click(function(){
+            $("#content1, #content3, #content4").hide();
+            $("#content2").show();
+        });
+        $("#dropdown_btn3, #menu_btn3").click(function(){
+            $("#content2, #content1, #content4").hide();
+            $("#content3").show();
+        });
+        $("#dropdown_btn4, #menu_btn4").click(function(){
+            $("#content2, #content3, #content1").hide();
+            $("#content4").show();
+        });
+
+    })
+
+</script>
+<!-- jQuery頁面切換 -->
+<script>
+    $(document).ready(function(){
+        $(".dropbtn").click(function(){
+            $(".dropdown-content").slideToggle("fast");
+        })
+        if ($(window).width() > 900) {
+            $(".dropdown-content").hide();
+        }
+    })
+</script>
+<!-- 下拉選單點擊切換 -->
+<script>
+    var width = window.innerWidth;
+    var dropcont = document.getElementsByClassName("dropdown-content");
+    var dropbtn = document.getElementsByClassName("dropbtn");
+    document.getElementById("#content1").innerHTML = width ;
+    if (width > 900){
+        dropcont.style.display = "none";
+    }
+</script>
+<script>
+    $(document).ready(function(){
+        $(".photo").click(function(){
+            $("#myModal").show();
+            $("#img01").attr("src", this.src);
+            $("#caption").text(this.alt);
+        });
+        $(".close").click(function(){
+            $("#myModal").hide();
+        });
+    });
+</script>
+<!-- 點擊相片大圖投放,model已隱藏 -->
+<!--  
+<script>
+    var btn1 = document.querySelector('#dropdown_btn1');
+    var btn2 = document.querySelector('#dropdown_btn2');
+    var btn3 = document.querySelector('#dropdown_btn3');
+    var btn4 = document.querySelector('#dropdown_btn4');
+    var content1 = document.querySelector('#content1');
+    var content2 = document.querySelector('#content2');
+    var content3 = document.querySelector('#content3');
+    var content4 = document.querySelector('#content4');
+
+    btn1.addEventListener('click',page1);
+     function page1() {
+        content1.style.display = 'block';
+        content2.style.display = 'none';
+        content3.style.display = 'none';
+        content4.style.display = 'none';
+    }
+    btn2.addEventListener('click',page2);
+     function page2() {
+        content1.style.display = 'none';
+        content2.style.display = 'block';
+        content3.style.display = 'none';
+        content4.style.display = 'none';
+    }
+    btn3.addEventListener('click',page3);
+     function page3() {
+        content1.style.display = 'none';
+        content2.style.display = 'none';
+        content3.style.display = 'block';
+        content4.style.display = 'none';
+    }
+    btn4.addEventListener('click',page4);
+     function page4() {
+        content1.style.display = 'none';
+        content2.style.display = 'none';
+        content3.style.display = 'none';
+        content4.style.display = 'block';
+    }
+
+</script>
+
+<script>
+    var btn1 = document.querySelector('#menu_btn1');
+    var btn2 = document.querySelector('#menu_btn2');
+    var btn3 = document.querySelector('#menu_btn3');
+    var btn4 = document.querySelector('#menu_btn4');
+    var content1 = document.querySelector('#content1');
+    var content2 = document.querySelector('#content2');
+    var content3 = document.querySelector('#content3');
+    var content4 = document.querySelector('#content4');
+
+    btn1.addEventListener('click',page1);
+     function page1() {
+        content1.style.display = 'block';
+        content2.style.display = 'none';
+        content3.style.display = 'none';
+        content4.style.display = 'none';
+    }
+    btn2.addEventListener('click',page2);
+     function page2() {
+        content1.style.display = 'none';
+        content2.style.display = 'block';
+        content3.style.display = 'none';
+        content4.style.display = 'none';
+    }
+    btn3.addEventListener('click',page3);
+     function page3() {
+        content1.style.display = 'none';
+        content2.style.display = 'none';
+        content3.style.display = 'block';
+        content4.style.display = 'none';
+    }
+    btn4.addEventListener('click',page4);
+     function page4() {
+        content1.style.display = 'none';
+        content2.style.display = 'none';
+        content3.style.display = 'none';
+        content4.style.display = 'block';
+    }
+
+</script>
+-->
+<!-- 
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+ -->
+<!--大圖model-->
+<!-- 
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.querySelector('.photo');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+</script>
+ -->
+<!--function-->
+
+</body>
+</head>
+</html>
