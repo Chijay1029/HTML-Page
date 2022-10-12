@@ -69,3 +69,40 @@ $ git merge Newbranch
 合併後，可將分支刪除
 $ git branch -d Newbranch
 
+
+將本地Git上傳到GitHub
+先從GitHub創造新的repository
+複製連結 https://github.com/Chijay1029/HTML-Page.git
+
+$ git remote add origin https://github.com/Chijay1029/HTML-Page.git
+
+將master推送到url，默認為遠程分支
+$ git push --set-upstream origin master
+
+獲取GitHub上的更改紀錄
+$ git fetch origin
+
+檢查暫存
+$ git status
+
+若發現落後commit，查看GitHub上log紀錄
+$ git log origin/master
+
+確認無誤後，與本地Git合併
+$ git merge origin/master
+
+再次檢查暫存
+$ git status
+
+若要直接更新本地而不進行檢查
+$ git pull origin
+
+在本地更新完後提交
+$ git commit -m "更新了哪些東西"
+
+檢查暫存
+$ git status
+
+發現超前GitHub暫存的話，推送回GitHub
+$ git push origin
+
