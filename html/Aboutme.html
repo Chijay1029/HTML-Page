@@ -38,7 +38,7 @@
         </li>
         <li><a class="active" href="Aboutme.html" title="">關於我</a></li>
         <li class="page2"><a href="Activity.html" title="">活動錦集</a></li>
-        <li class="page3"><a href="javascript:void(0)" title="Page3">頁面3</a></li>
+        <li class="colorchange"><a href="javascript:void(0)" title="colorchange">更改顏色主題</a></li>
         <li style="float:right; height: auto;">
             <a href="#header" title="回到頂端" style="height: 26.4px; width: 60px;">
                 <i class='far fa-arrow-alt-circle-up' style='font-size:30px'></i>
@@ -124,15 +124,16 @@
 <div id="footer">
 	版權 © ChiJay1029.com
 </div>
-<!-- 
+
 <script>
     $(document).ready(function(){
-        $(".page3").click(function(){
-            $("#content1").text($(window).width());
-        });
-    })
+        $(".colorchange").click(function(){
+            $("*").toggleClass("dark");
+            })
+        })
+    
 </script>
- -->
+ 
  <!-- 頁面3按鈕,更改文本內容--> 
 <script>
     $(document).ready(function(){
